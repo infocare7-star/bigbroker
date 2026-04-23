@@ -1,0 +1,6 @@
+{
+  "name": "BigBroker",
+  "description": "A mobile-first real estate application with search, filtering, and property management powered by Firebase.",
+  "requestFramePermissions": [],
+  "majorCapabilities": []
+}

@@ -1,0 +1,51 @@
+@import "tailwindcss";
+
+@theme {
+  --color-bg-dark: #0B0C10;
+  --color-surface-dark: #1F2833;
+  --color-accent-teal: #45A29E;
+  --color-accent-cyan: #66FCF1;
+  --color-text-silver: #C5C6C7;
+  
+  --font-sans: 'Helvetica Neue', Arial, sans-serif;
+}
+
+@layer base {
+  body {
+    @apply bg-bg-dark text-text-silver font-sans;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    @apply text-white uppercase tracking-tight;
+  }
+}
+
+.card-theme {
+  @apply bg-surface-dark border border-accent-teal/30 rounded-sm transition-all duration-200 hover:border-accent-cyan/50 hover:-translate-y-1 shadow-2xl;
+}
+
+.gold-text {
+  @apply text-accent-cyan;
+}
+
+.price-tag {
+  @apply text-accent-teal font-light tracking-tighter;
+}
+
+.img-placeholder-theme {
+  background: linear-gradient(135deg, #1F2833 0%, #0B0C10 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+.img-placeholder-theme::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.1;
+  background-image: radial-gradient(#45A29E 1px, transparent 1px);
+  background-size: 20px 20px;
+}
